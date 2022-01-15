@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Trang chủ
+    </title>
+    <link href="../filecss/menu.css" type="text/css" rel="stylesheet">
+    <link href="../filecss/DSlop.css" type="text/css" rel="stylesheet">
+    <link href="../filecss/slide.css" type="text/css" rel="stylesheet">
+    <link href="../data/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="first">
+                <div class="hidden">
+                    <img class="icon1" src="../anh/list.png">
+                </div>
+                <ul id="nav" class="nav">
+                    <li><a href="trangchuGV.html"><i class="iconF fas fa-home"></i>Trang chủ</a></li>
+                    <li><a href="DSlop.html"><i class="iconF fas fa-list-alt"></i>Danh sách lớp học</a></li>
+                    <li><a href="timkiem.html"><i class="iconF fas fa-search"></i>Tìm kiếm</a></li>
+                    <li class="GV"><a href="QLlopGV.html"><i class="iconF fas fa-chalkboard-teacher"></i>Quản lý
+                            lớp</a></li>
+                </ul>
+            </div>
+            <div class="last">
+                <span id="ten">Giáo viên 1</span>
+                <ul id="account" class="account">
+                    <li id="id">ID: 1</li>
+                    <li id="email">Mail: GV1@gmail.com</li>
+                    <li class="form_exit">
+                        <form><button id="button_exit" class="button_exit"
+                                name="exit" value="true" runat="server"><span><i
+                                        class="fas fa-sign-out-alt"></i></span><a href="login.html">Thoát</a></button></form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="containbody">
+        <div class="container">
+            <div class="slide change display" style="display: none;"><img class="classimg" src="../anh/slider1.jpg"></div>
+            <div class="slide change" style="display: none;"><img class="classimg" src="../anh/slider2.jpg"></div>
+            <div class="slide change" style="display: block;"><img class="classimg" src="../anh/slider3.jpg"></div>
+            <div>
+                <a class="prev" onclick="plus(-1)">❮</a>
+                <a class="next" onclick="plus(1)">❯</a>
+            </div>
+            <div class="classdot" style="text-align:center">
+                <span class="dot" onclick="current(1)"></span>
+                <span class="dot" onclick="current(2)"></span>
+                <span class="dot active" onclick="current(3)"></span>
+            </div>
+        </div>
+        <section class="fars">
+            <h1>Các lớp đăng bài mới nhất</h1>
+            <div id="sec1" class="flex_box">
+                <div class="lop_detail"><img class="imgVocado" src="../anh/pngegg.png">
+                    <p class="className"><b><a href="lopchitiet.html">Tiếng Anh 2</a></b></p>
+                    <p><i class="ix">1</i></p>
+                    <p class="tenGV">Giáo viên 1</p>
+                    <div class="lich"><i class="iconF iconclock far fa-clock"></i>
+                        <div class="time">4/22/2021</div>
+                    </div>
+                </div>
+                <div class="lop_detail"><img class="imgVocado" src="../anh/pngegg.png">
+                    <p class="className"><b><a href="lopchitiet.html">Tiếng Anh 2</a></b></p>
+                    <p><i class="ix">1</i></p>
+                    <p class="tenGV">Giáo viên 1</p>
+                    <div class="lich"><i class="iconF iconclock far fa-clock"></i>
+                        <div class="time">11/26/2020</div>
+                    </div>
+                </div>
+                <div class="lop_detail"><img class="imgVocado" src="../anh/pngegg.png">
+                    <p class="className"><b><a href="lopchitiet.html">Tiếng Anh 1</a></b></p>
+                    <p><i class="ix">0</i></p>
+                    <p class="tenGV">Giáo viên 1</p>
+                    <div class="lich"><i class="iconF iconclock far fa-clock"></i>
+                        <div class="time">6/11/2020</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fars">
+            <h1>Các lớp sắp đăng bài</h1>
+            <div id="sec2" class="flex_box"></div>
+        </section>
+    </section>
+
+    <footer>
+        <aside class="aside">
+            <h2><b>Trang web bài giảng học trực tuyến G-H</b></h2>
+            <p class="footer">Trang web được thiết kế bởi sinh viên lớp 1810A05 - ĐH Mở HN</p>
+        </aside>
+        <section class="GH">
+            <h3><b>Liên hệ</b></h3>
+            <p class="footer"><i class="iconF fas fa-map-marked-alt"></i>Địa chỉ:96 Định Công, Hoàng Mai, HN</p>
+            <p class="footer"><i class="iconF fas fa-envelope"></i>Mail:tructuyen@gmail.com</p>
+        </section>
+        <section class="GH">
+            <h3>Thành viên</h3>
+            <p class="footer"><a href="https://www.facebook.com/profile.php?id=100005761937708"
+                    title="Facebook Giang"><i class="iconF fab fa-facebook-square"></i>Đỗ Văn Giang</a></p>
+        </section>
+    </footer>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        var do_alert = function () {
+            showSlides(slideIndex += 1);
+        };
+        var cl = setInterval(do_alert, 5000);
+        function plus(n) {
+            showSlides(slideIndex += n);
+            //clearInterval(cl);
+        }
+        function current(n) {
+            showSlides(slideIndex = n);
+            //clearInterval(cl);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            if (slideIndex != 1) {
+                slides[0].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

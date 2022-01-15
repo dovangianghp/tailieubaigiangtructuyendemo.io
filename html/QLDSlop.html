@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Quản lý danh sách các lớp
+    </title>
+    <link href="../filecss/QuanLy.css" type="text/css" rel="stylesheet">
+    <link href="../filecss/menu.css" type="text/css" rel="stylesheet">
+    <link href="../data/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../filejs/QLDSlop.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <div class="hidden">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul id="nav" class="nav">
+                    <li><a href="trangchuadmin.html"><i class="iconF fas fa-home"></i>Trang chủ</a></li>
+                    <li><a href="DSlop.html"><i class="iconF fas fa-list-alt"></i>Danh sách lớp học</a></li>
+                    <li><a href="timkiem.html"><i class="iconF fas fa-search"></i>Tìm kiếm</a></li>
+                    <li class="ad1"><a href="QLDSlop.html"><i class="iconF fas fa-user-cog"></i>Quản lý DS lớp</a>
+                    </li>
+                    <li class="ad2"  ><a href="QLDSmember.html"><span><i class="iconF fas fa-users"></i></span>Quản lý DS mem</a></li>
+                </ul>
+            </div>
+            <div class="last">
+                <span id="ten">admin(DVG-NLH)</span>
+                <ul id="account" class="account">
+                    <li id="id">ID: 0</li>
+                    <li id="email">Mail: admin@gmail.com</li>
+                    <li class="form_exit">
+                        <form    ><button   id="button_exit" class="button_exit"
+                                name="exit" value="true"  ><span><i
+                                        class="iconF fas fa-sign-out-alt"></i></span><a href="login.html">Thoát</a></button></form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="grid containbody">
+        <section class="s1 s_lop">
+            <form   action="" id="DSlop" class="form_QL" onsubmit="return checklop()">
+                <div class="aspNetHidden">
+                    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                        value="sidPeXWNPZW0fbSGkCaBEDB41zIAVlBJvejF3wGJYztm4ZkuCORPZo4UZuOhzvpJb88LmKv5qZ5FqpHNkUVZhPitUY+aoGrdD+GFFrPcd5ySqHjOJl6PG8NQTjGIzwRkhRGy0CHhFvWiRcnCXB3k1xvHlrMyQoJzfaxvyXLaJaCDPJzUUs3sEHXsQDzrZ3a3dmrdEP72PyhmD2/7+aaZbQ8z1jBo3OAVkKR9KYxOyVz2g8UfS0buHCf7RtjmROtpltywTo0c8d7xoOuARqrryBOJ/6txP5YcFFPuCp4WphXQGjvVanAdhHziqOJ9nq7CGaiKGttYFS9jCEkw4yrg2ZvgkrC7YkF5yludGP95te1Tq/0D/SRozCV4XurpFyf+eRM2mUzFeLyF/CDdPihS0a0E9UWgh699BvmxhXfFX8oyk9QTzk0lP0yDOKekfiBt95fKFz4l99lY6kSwxbs4zZfc9wDwVu+7eo9Hpy6OLrzavD2Rh+daZByjdbFaMTnOUYfUyFH2Sd5O7zGpj+BtInmHIRzGuoMOXgw6e46jm4LlzVSeJugHNp5jIEaG4VZPV6xS9saQq+v6F9+ja5HYF/S69UfJ29JMp6N1xz6eJ16Td1RE5zczfUC2EhMWcldMTtTsXWFOYhNW5sNNO7qSAcqCY04baxsZGw5IL1IkkFOsFV2dW9ncMLIUn3y/wOT7y2cvN+i/RdVmBRiJ2QOZP4VxQN9q35uO91n4sW/V+qnXCxbdjultul1Fk3m4UL65U2mgdQzlpxBL49yJeJ+hnggUXDAivoq9+k71h/yjI1mKU81BjPbDVEPOwMW0ZS8BOEOfkhnzgVlPx63cupMaHBEdHYlc2xtAXCmpxo8DvH+o8g0Y5jLzNnTIFrvpp1rJOGRcijY4B3jxG4uT4bqck0zy2wBnHUzDQ/CpQlML8MUc9vOMbwSTpA2nJ7pIhY8RqG/qd8kVcS3wMgtR7qlizmCYG7KdYtmnTM1lxfFaB+cJE1TArXPibsXpaLk5QxfsalOXaQbjBn9Nln6lu8oQ2CJ3aqX2jRT/W/ys6trFd7U1HcNGQc762a2eLhetwJziVYWOyqFmOGIo7xsPT++37hobSKPqeiggrqhrAe9pCGtufHzPwYjDZRkydxczSHqcpOvlKsupkJnsh4gZOwvXNpuBKqjvdcfHJigW8vKERe3DfJAIXnCmbzdkiJEYywoQzAPzXTSTGPUgDWjcksS4YUa3T6Vul6BZ/GuLCwzpTX4OIJnv6jAz3mHZOwBoHhiWuo0HV5B9vup02OfmT4v1ObH61Bg1hTg/DHrHGNQ+1pu7jA95Zzi05z3kpCURjHEWlXIyHCXANMdarQsWGnZpYTW8t8iGKeyzpZ5TrEpziHJIZoNouYD0tdnBdEXV0iUV">
+                </div>
+
+                <div class="aspNetHidden">
+
+                    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9E72A09E">
+                </div>
+                <h1 class="tk">THÊM LỚP</h1>
+                <label for="txtTen">Nhập tên giáo viên:</label>
+                <input type="text" id="txtTena" name="txtTen" value="">
+                <label for="txtlop">Nhập tên lớp:</label>
+                <input type="text" id="txtlopa" name="txtlop" value="">
+
+                <div id="subbutton">
+                    <button   class="btn" name="btnRegistb" value="true">Thêm</button>
+                </div>
+            </form>
+        </section>
+        <section class="s2">
+            <h1>Danh sách Lớp</h1>
+            <table id="table2">
+                <tbody>
+                    <tr>
+                        <td><b>ID</b></td>
+                        <td><b>Tên lớp</b></td>
+                        <td><b>Tên GV</b></td>
+                        <td><b>URL</b></td>
+                        <td><b>Chức năng</b></td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Tiếng Anh 1</td>
+                        <td>Giáo viên 1</td>
+                        <td>lopchitiet.aspx?id=0</td>
+                        <td>
+                            <form    ><button   value="0" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Tiếng Anh 2</td>
+                        <td>Giáo viên 1</td>
+                        <td>lopchitiet.aspx?id=1</td>
+                        <td>
+                            <form    ><button   value="1" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tiếng Anh 3</td>
+                        <td>Giáo viên 1</td>
+                        <td>lopchitiet.aspx?id=2</td>
+                        <td>
+                            <form    ><button   value="2" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lập trình</td>
+                        <td>Giáo viên 2</td>
+                        <td>lopchitiet.aspx?id=3</td>
+                        <td>
+                            <form    ><button   value="3" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>lập trình 2</td>
+                        <td>Giáo viên 2</td>
+                        <td>lopchitiet.aspx?id=4</td>
+                        <td>
+                            <form    ><button   value="4" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Kỹ thuật 1</td>
+                        <td>Giáo viên 3</td>
+                        <td>lopchitiet.aspx?id=6</td>
+                        <td>
+                            <form    ><button   value="6" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>lập trình 4</td>
+                        <td>Giáo viên 2</td>
+                        <td>lopchitiet.aspx?id=8</td>
+                        <td>
+                            <form    ><button   value="8" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>lập trình 5</td>
+                        <td>Giáo viên 2</td>
+                        <td>lopchitiet.aspx?id=9</td>
+                        <td>
+                            <form    ><button   value="9" class="btn" name="btnXoa"
+                                     >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>lập trình 9</td>
+                        <td>Giáo viên 2</td>
+                        <td>lopchitiet.aspx?id=10</td>
+                        <td>
+                            <form    ><button   value="10" class="btn"
+                                    name="btnXoa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+    <footer>
+        <aside class="aside">
+            <h2><b>Trang web bài giảng học trực tuyến G-H</b></h2>
+            <p class="footer">Trang web được thiết kế bởi sinh viên lớp 1810A05 - ĐH Mở HN</p>
+        </aside>
+        <section class="GH">
+            <h3><b>Liên hệ</b></h3>
+            <p class="footer"><i class="iconF fas fa-map-marked-alt"></i>Địa chỉ:96 Định Công, Hoàng Mai, HN</p>
+            <p class="footer"><i class="iconF fas fa-envelope"></i>Mail:tructuyen@gmail.com</p>
+        </section>
+        <section class="GH">
+            <h3>Thành viên</h3>
+            <p class="footer"><a href="https://www.facebook.com/profile.php?id=100005761937708"
+                    title="Facebook Giang"><i class="iconF fab fa-facebook-square"></i>Đỗ Văn Giang</a></p>
+        </section>
+    </footer>
+
+
+
+</body>
+
+</html>

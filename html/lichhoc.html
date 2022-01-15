@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Lịch học
+    </title>
+    <link href="../filecss/QuanLy.css" type="text/css" rel="stylesheet">
+    <link href="../filecss/menu.css" type="text/css" rel="stylesheet">
+    <link href="../data/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <script src="../filejs/lichhoc.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <div class="hidden">
+                    <img class="icon1" src="../anh/list.png">
+                </div>
+                <ul id="nav" class="nav">
+                    <li><a href="trangchuSV.html"><i class="iconF fas fa-home"></i>Trang chủ</a></li>
+                    <li><a href="DSlop.html"><i class="iconF fas fa-list-alt"></i>Danh sách lớp học</a></li>
+                    <li><a href="timkiem.html"><i class="iconF fas fa-search"></i>Tìm kiếm</a></li>
+                    <li class="GV"><a href="lichhoc.html"><i class="iconF far fa-calendar-check"></i>Lịch lớp của
+                            tôi</a></li>
+                </ul>
+            </div>
+            <div class="last">
+                <span id="ten">Sinh viên 1</span>
+                <ul id="account" class="account">
+                    <li id="id">ID: 3</li>
+                    <li id="email">Mail: SV1@gmail.com</li>
+                    <li class="form_exit">
+                        <form runat="server" method="post"><button type="submit" id="button_exit" class="button_exit"
+                                name="exit" value="true" runat="server"><span><i
+                                        class="fas fa-sign-out-alt"></i></span><a href="login.html">Thoát</a></button></form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="flex containbody">
+        <h1 class="lichhoc">Lịch học của <span id="h1">Sinh viên 1</span></h1>
+        <form method="post" action="./lichhoc.html" id="form_choose" onsubmit="return checkchoose()">
+            <div class="aspNetHidden">
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                    value="VM+p45j9YmRIbh/4Se27J3caotBe+089s40aDqkr/D8q4kG5S78vv7U5qP6/ihBudwqUmm6mc5/+bsbEDbUTNXYYbKmtHj0Crr4Kj9MlluPqGntg61JdDNS3bUHViWlpbVlFtAhID2KQMFF9JQHlnImNWTK1qDYhGkd+Z2fSElsI5LUL8/LXF3ILpxD3sQw54hmqhhK5cv5o8SqYl7R8/DWI824evM/bpta2MJ3NUnNcvy42Rm/FESJ6ssNjV6SgRP3DV54xH/AJffGtcKcwLYOBLakodkHX1t50XcZJpqAHSFQiNoNkoD4Z2WEZ2ScbLs396/8GrSzPJPPQApHD9/snCUNcHLB88yGx6qJOhpHsU/3HzMQ/4kR/Mhv0hCzdNPdZYBnnjWt4jXWHImEsf0QtViuroBtx1wDzm8BNB/gTk8yhGH8/jQ4Vk0KpOBIXqWTcO+accoppxm2DbQWfFOst7HRA+fE9tAoRnKYupszA5JHCm6QNGo77xU/i3sakgfLgNnL+mvZkDpwUR/1uHpSaYJVaAN2ZCHYTt3SnYUQJezIXHlZYL6T2Ojz8CdicftiUBqqUtKAa7oKva0uKEOo1TVdMFDxc/MM2ljGz9eWIFDpk6cODOowSZO3lSOlpxOVk57uaj+fwnkAcmQuLeAJANKgo0id0XgKO6UHJltUITUNli7r8FhiYvZOo3y7LxDeSwq0gBMwVJVmYip4r/KUaIB2J4kPvHyKzmH+Y2LhEdWO0G2xxEH4qlXCJ1++cnRnsblcJT3ESOiqydb9GXZUz0KIfOMX0YgufyeHgH46jQl8WabJSBgy+a+yh6bclnjG25rkhhLJuLlw4Cbm2jlU5SeEPKzH+CiIdF40p5ezPc1LsjY9FV+lFXaPCAwVPhkL7W2seAKVzyd6lUDA9b6toa2Hf+EBZxs47HcHGIE3es7xfktjihAngkbbfHHx5HLDnGa5WGqXbY6DxAtPGtllDBmHTLbMtI5YRAYL7FGI5YdSmVqFlTaxbG1vFuNzEZWrZUaV5jvFzOxEIpsMbe6r+CArM6fsgog6JxcNnSLvY4mIeZLNHMMK39rGtPNOHAT0hv5ygg2WS8u/KQ5CbQzBRj9mYLbR+mMKa5CYv5H0DSk++bHP2yFH0jYt0dHNsj7fpkawrLEIPm55WbLxA74PO9xcFEoKPkNgmxZFAN1Juq1nYilH5ekl5RQwVlhKVIKI/P9CeZjUA78LFsawlwETBJcSykwHQKTB1ChegqZIe+4yAtjYSM+M2ZOSYLoGB">
+            </div>
+
+            <div class="aspNetHidden">
+
+                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CB78C13A">
+            </div>
+            <input type="radio" class="radiochoose" name="choose" value="Sắp tới">Sắp tới
+            <input type="radio" class="radiochoose" name="choose" value="Tất cả">Tất cả
+            <button type="submit" id="choosebtn" name="choosebtn" value="true">Hiện</button>
+        </form>
+        <h3 id="h3" class="lichhoc"></h3>
+        <table id="tablelich">
+            <tbody>
+                <tr class="thead">
+                    <td><b>Ngày đăng giáo trình</b></td>
+                    <td><b>Tên lớp</b></td>
+                    <td><b>Tên Giáo viên</b></td>
+                    <td><b>link lớp</b></td>
+                </tr>
+                <tr>
+                    <td>4/21/2020 12:00:00 AM</td>
+                    <td>Tiếng Anh 1</td>
+                    <td>Giáo viên 1</td>
+                    <td><a href="lopchitiet.html">Nhấn vào đây để xem lớp</a></td>
+                </tr>
+                <tr>
+                    <td>5/4/2020 12:00:00 AM</td>
+                    <td>Tiếng Anh 1</td>
+                    <td>Giáo viên 1</td>
+                    <td><a href="lopchitiet.html">Nhấn vào đây để xem lớp</a></td>
+                </tr>
+                <tr>
+                    <td>6/11/2020 12:00:00 AM</td>
+                    <td>Tiếng Anh 1</td>
+                    <td>Giáo viên 1</td>
+                    <td><a href="lopchitiet.html">Nhấn vào đây để xem lớp</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <footer>
+        <aside class="aside">
+            <h2><b>Trang web bài giảng học trực tuyến G-H</b></h2>
+            <p class="footer">Trang web được thiết kế bởi sinh viên lớp 1810A05 - ĐH Mở HN</p>
+        </aside>
+        <section class="GH">
+            <h3><b>Liên hệ</b></h3>
+            <p class="footer"><i class="iconF fas fa-map-marked-alt"></i>Địa chỉ:96 Định Công, Hoàng Mai, HN</p>
+            <p class="footer"><i class="iconF fas fa-envelope"></i>Mail:tructuyen@gmail.com</p>
+        </section>
+        <section class="GH">
+            <h3>Thành viên</h3>
+            <p class="footer"><a href="https://www.facebook.com/profile.php?id=100005761937708"
+                    title="Facebook Giang"><i class="iconF fab fa-facebook-square"></i>Đỗ Văn Giang</a></p>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>

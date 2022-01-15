@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            Quản lý tài khoản
+        </title>
+        <link href="../filecss/QuanLy.css" type="text/css" rel="stylesheet">
+        <link href="../filecss/menu.css" type="text/css" rel="stylesheet">
+        <link href="../data/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+        <script type="text/javascript" src="../filejs/regist.js"></script>
+    </head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <div class="hidden">
+                    <img class="icon1" src="../anh/list.png">
+                </div>
+                <ul id="nav" class="nav">
+                    <li><a href="trangchuadmin.html"><i class="iconF fas fa-home"></i>Trang chủ</a></li>
+                    <li><a href="DSlop.html"><i class="iconF fas fa-list-alt"></i>Danh sách lớp học</a></li>
+                    <li><a href="timkiem.html"><i class="iconF fas fa-search"></i>Tìm kiếm</a></li>
+                    <li class="ad1"><a href="QLDSlop.html"><i class="iconF fas fa-user-cog"></i>Quản lý DS lớp</a>
+                    </li>
+                    <li class="ad2"  ><a href="QLDSmember.html"><span><i class="iconF fas fa-users"></i></span>Quản lý DS mem</a></li>
+                </ul>
+            </div>
+            <div class="last">
+                <span id="ten">admin(DVG-NLH)</span>
+                <ul id="account" class="account">
+                    <li id="id">ID: 0</li>
+                    <li id="email">Mail: admin@gmail.com</li>
+                    <li class="form_exit">
+                        <form    ><button   id="button_exit" class="button_exit"
+                                name="exit" value="true"  ><span><i
+                                        class="fas fa-sign-out-alt"></i></span><a href="login.html">Thoát</a></button></form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="grid containbody">
+        <section class="s1 s_QLDS">
+
+            <form   action="./QLDSmember.html" id="ctl01" class="form_QL" onsubmit="return check1()">
+                <div class="aspNetHidden">
+                    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                        value="Ybe0CorvRDGoEVuofpF20YMawCijPU/ixKgmO8743autYn1wOorLXKhFFsOKj5Hn36UFSeraRuQBOxNHOGhaO4DIo1OVHR2H6TFx29bwVXpkLTxyuD87dyed8g9V0F+jW8gIky125FhBcliJI6KiCsBWdJofcv0nOJxXRN7KvMX3wgu4A8e8wkOQLOlFLWhcchdQTq5qC8h89P6lp/+swPXjaKhdusSaFjjg/1Wxas8GxR/FrW5/TX9OSB/AvpUQVh2eZxkqHQ4lpqwi5hbha1ZUNv6hBh3tWuBgQtz7Y6ikVYz2DEQHPEVWHh0aPpH5+AcDrEfqILeFFmQISNUZujPOJe4DP0TFSX2GzraEF7MpE+aQk4cBDK5ocdP/JNxSnGFwo1zu5GgAKPP9YxUiRBcvyq+dFh08i5TaClJ3VNMBFHnKtC1HdAdx1nOxu0kBASkPCKg98lkNsGODPZENC3JUjTRjQoPPTG2Q74cQNj2WY9/6zYzpraQhpQmCW6rpDWK1YO+5c7OsV27PMq6GL7ntF2DD7vvIbepEFQUfssn90inc7bos5cwD5gTb+T61BUrCvrELTpa/76/Q0LUTaBJxpiX98rpe26qbvhcSuXYx5CSN3giu62e0W9AT48wpEkQFV3seHoSxglJrnJ+vlE/YKnFsemlfZVSnkL/7/zAfKAzloQ3rLCOU0y0pFHL7rxMJ30o3D0+u058cjQZqb/dYYO0020HW4tBpRXPYJ0Kcdso7zobgV/SZeVtK0AW/aDggHqOsJvKhRd+sJhGqxbhjmHElh/EBC0Cx7M2okTEcfSA7HLdOC8iJ1COfGCHYepZ33EDpRHGyVOKwINzGL9QgWsAfKHXalYx2OpB2F3wWL7sWh65O6omTstITr7Cr8pLB0VGUOL30759r9JG/dA9S2t+THMt62lvNjuh5UJ7n/T2bOj/iB7hJC+Y+4152YWjJ+PN2Y9Y25CHBKfkOWtvyDSCf7mUNJzbzfqnNYQ1KF5pongDJQcPRUy7J+zMzu5W3DsGDZQY2p92yelCgyqw+15qwYOJPCKlUW4rK4+quP+zckQBTJ2/hPXCi2Gy7xAtzs+49ZCXfb8OHFOMKwCiGR4gQabK+csM6hboi+MPEdhIw/K78J4aBI2E8ccgAd8IT4xR8TFL3oZB6NeLeYi8zBGKgqyzJqbKgjuUmlMILphDV9S0Bo+TwR85SRStYwtqoI4Nz707SUgfBAe6a7AqFrb0ivRS6/gStOdL+++mRqGDLIbcAkNzF1bFFxZxmfHuJDJnnxmAz6wqASZZa2TKfQ4nkazp+agQX0grgV4EGAZnVqprG8HOePi93T5eJwySdvDjFku7+WXXRDrrmYozB2GWc0lGPhWFsJk6HT6S8cpFee34lribvwKx6jlY+">
+                </div>
+
+                <div class="aspNetHidden">
+
+                    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8ED149BE">
+                </div>
+                <h1 class="tk">THÊM TÀI KHOẢN</h1>
+                <label for="txtMaila">Nhập tên người dùng (email):</label>
+                <input type="email" id="txtMail" name="txtMaila" value="">
+                <label for="txtPassa">Nhập mật khẩu:</label>
+                <input type="password" id="txtPass" name="txtPassa" value="">
+                <label for="txtRe_Passa">Nhập lại mật khẩu:</label>
+                <input type="password" id="txtRe_Pass" name="txtRe_Passa" value="">
+                <label for="txtFullNamea">Nhập họ và tên:</label>
+                <input type="text" id="txtFullName" name="txtFullNamea" value="">
+                <label>Đối tượng</label>
+                <div id="checkboxa">
+                    <div><input type="radio" class="checkbox_sona" name="txtDoituong" value="Giáo viên"><span>Giáo
+                            viên</span></div>
+                    <div><input type="radio" class="checkbox_sona" name="txtDoituong" value="Sinh viên"><span>Sinh
+                            viên</span></div>
+                </div>
+                <div id="subbutton">
+                    <button   class="btn" name="btnRegista" value="true">Thêm</button>
+                </div>
+            </form>
+        </section>
+        <section class="s2">
+            <h1>Danh sách tài khoản</h1>
+            <table id="table1">
+                <tbody>
+                    <tr>
+                        <td><b>ID</b></td>
+                        <td><b>Email</b></td>
+                        <td><b>Mật khẩu</b></td>
+                        <td><b>Tên</b></td>
+                        <td><b>Đối tượng</b></td>
+                        <td><b>Chức năng</b></td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>admin@gmail.com</td>
+                        <td>123456aA</td>
+                        <td>admin(DVG-NLH)</td>
+                        <td>admin</td>
+                        <td>
+                            <form    ><button   value="0" class="btn"
+                                    name="btnXoaa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>GV1@gmail.com</td>
+                        <td>111111aA</td>
+                        <td>Giáo viên 1</td>
+                        <td>Giáo viên</td>
+                        <td>
+                            <form    ><button   value="1" class="btn"
+                                    name="btnXoaa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>GV2@gmail.com</td>
+                        <td>111111aA</td>
+                        <td>Giáo viên 2</td>
+                        <td>Giáo viên</td>
+                        <td>
+                            <form    ><button   value="2" class="btn"
+                                    name="btnXoaa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>SV1@gmail.com</td>
+                        <td>111111bB</td>
+                        <td>Sinh viên 1</td>
+                        <td>Sinh viên</td>
+                        <td>
+                            <form    ><button   value="3" class="btn"
+                                    name="btnXoaa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>SV2@gmail.com</td>
+                        <td>111111cC</td>
+                        <td>Sinh viên 2</td>
+                        <td>Sinh viên</td>
+                        <td>
+                            <form    ><button   value="4" class="btn"
+                                    name="btnXoaa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>GV3@gmail.com</td>
+                        <td>123456aA</td>
+                        <td>Giáo viên 3</td>
+                        <td>Giáo viên</td>
+                        <td>
+                            <form    ><button   value="5" class="btn"
+                                    name="btnXoaa"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+    <footer>
+        <aside class="aside">
+            <h2><b>Trang web bài giảng học trực tuyến G-H</b></h2>
+            <p class="footer">Trang web được thiết kế bởi sinh viên lớp 1810A05 - ĐH Mở HN</p>
+        </aside>
+        <section class="GH">
+            <h3><b>Liên hệ</b></h3>
+            <p class="footer"><i class="iconF fas fa-map-marked-alt"></i>Địa chỉ:96 Định Công, Hoàng Mai, HN</p>
+            <p class="footer"><i class="iconF fas fa-envelope"></i>Mail:tructuyen@gmail.com</p>
+        </section>
+        <section class="GH">
+            <h3>Thành viên</h3>
+            <p class="footer"><a href="https://www.facebook.com/profile.php?id=100005761937708"
+                    title="Facebook Giang"><i class="iconF fab fa-facebook-square"></i>Đỗ Văn Giang</a></p>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Quản lý lớp
+    </title>
+    <link href="../filecss/QuanLy.css" type="text/css" rel="stylesheet">
+    <link href="../filecss/menu.css" type="text/css" rel="stylesheet">
+    <link href="../data/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../filejs/QuanLylichlop.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <div class="hidden">
+                    <img class="icon1" src="../anh/list.png">
+                </div>
+                <ul id="nav" class="nav">
+                    <li><a href="trangchuGV.html"><i class="iconF fas fa-home"></i>Trang chủ</a></li>
+                    <li><a href="DSlop.html"><i class="iconF fas fa-list-alt"></i>Danh sách lớp học</a></li>
+                    <li><a href="timkiem.html"><i class="iconF fas fa-search"></i>Tìm kiếm</a></li>
+                    <li class="GV"><a href="QLlopGV.html"><i class="iconF fas fa-chalkboard-teacher"></i>Quản lý
+                            lớp</a></li>
+                </ul>
+            </div>
+            <div class="last">
+                <span id="ten">Giáo viên 1</span>
+                <ul id="account" class="account">
+                    <li id="id">ID: 1</li>
+                    <li id="email">Mail: GV1@gmail.com</li>
+                    <li class="form_exit">
+                        <form    ><button   id="button_exit" class="button_exit"
+                                name="exit" value="true"  ><span><i
+                                        class="fas fa-sign-out-alt"></i></span><a href="login.html">Thoát</a></button></form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="grid containbody">
+        <section class="s1 s_lop">
+            <form   action="" id="ctl01" class="form_QL" onsubmit="return checkloplich()"
+                enctype="multipart/form-data">
+                <div class="aspNetHidden">
+                    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                        value="r+DUBnOS0tUVU5jtIS2RfBCcd3eSGg43AN7PH1R+9z/5xoQSZzQNsg0pcEKoxm1UOlaA040tBUV6TNYtnt5FHYKO5qeplu+Zy7G93XNBCNmiM1sX4VGk+LLiYkCioK/zmqF+g2DM3ZAkk2rQvlveuIdQ8LWLlo8SyShfcxtcZCdYZNoG6zasZxjMBdTCeZTWUde7OPu7p8eVQ1yl7LuR1kfBwA1U9KUJtYwZWeOo7CUnRE4DAfwPXfMf98Rlsh4ImALcqcxQvjA6yFy6BW2aXBCApNyk6yVNDDk7ez1VCADOhchggXtoRDVgdzBoKyBdZbnmJco8/uqsPKsdAsXi3hV+xhkOFPsiHROHaEjQTATqX6x/B58jr2qcVGFA5J6Ljj+AhNowRAg31ZjMPcurwz2uzzMeqiydqAafeDM2XdzA433Xw0o8ptcecI7Z9DJgn0Zi2RbJePJyRns4Y8Wydbaw1mKWMDhKG3zKpx3yAUn9ExdORDvK55Uowj4cje45MKnpMaFvCOMJVXja6gT2Dd86DG8QQ5cYjOhZgNcd8nVCJ78KE7sF/qjVdf9Aet+VHVN/6JMBRRhiXLtPg6JZQNR/OFdNoMCMZ+RWvRRILZsF9sWv9NWjozAbyzOrK+lEyi8UGZTZdMqOsIie5IhBFJ9ZQ1IB78CaG0QjDjFORpEA7B/s0UQBOIaF5rAg4fv98LdTZzri61v7MDsVpJNFRfao1X8I+qxQTZTZwdrqNIfBK72XKL21Mbbw+FLXrMMsBmjnn74JOu41NtTf/5Lq0w43oNNWjd0AFxKaReeHEHTMqGqL1znN0fzuLKKPhs8/JLmFrCa4knvVzPNGwA2M4oE5wnE79Eu3Ur9t/2gLFjv9C/MGap7t03XtICV+dUma263UBfjz9Q726fepTU1MqNniiSdiB0b7MXLbM8ZrNe4f7s5ZfwUSD/LQuU75ShDU9hGR5G3K8TL9a5ZabzUBW3B8Q6fZiV5dCIjxZJFEkB/NIiNhvPDbhHUUkJnfe3xyJKWGYJPTG+iJXHQ4gQbhO9zKaSn/E6fWO9hAz5fsXpj3rOIaVhnFlSjnS+lU44UA4wskg47KHdgHU/JyB+VzvoSVx0ybHUvpw5DfkFZR9g8FC7MUQUi+3rGUpzfKmi/BpSy026+J4KMPqWEMFCfzvge/d5OS/pjZu7zHIrdRAKOxL5TcP1bxu3ruhG61xHdA8xQ3+ayAekN+HkVW3WiuZs8h1O5ie/+LK1F45/qcUT4Bthy63pEGVvJpfU0dsr74YuWq6VHSCraxSALxzpK3wfsPtu/yRQ2HjsqPcd6HdYc=">
+                </div>
+
+                <div class="aspNetHidden">
+
+                    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E35088B5">
+                    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                        value="GZrTDdnW0C8uSGfNgoTU2B7qpxYXuxWC9fxkm7dLoMFYf0Vzy0xcsbP/aP194T/wvr+WInagxIhSjZ6bxHxZN3zpDyPNVBSK22zbTIG1L0P1eKjNdebkSNc8xxtgDV8JdNCSB1OsrVc2OSylAre03KAY5uLl0OQuNRDXGadHjxQ=">
+                </div>
+                <h1 class="tk">THÊM GIÁO TRÌNH</h1>
+                <br>
+                <label for="DropDownList1">Nhập ID lop:</label>
+                <select name="DropDownList1" id="DropDownList1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+
+                </select>
+                <br>
+                <label for="txtdate">Nhập ngày đăng bài:</label>
+                <input type="date" id="txtdate" name="txtdate" value="" required="required">
+                <label for="txtdate">Chọn file bài:</label>
+                <input type="../file" name="FileUpload1" id="FileUpload1" required="required">
+                <label for="txttitile">Nhập tên bài:</label>
+                <input type="text" id="txttitile" name="txttitile" value="" required="required">
+                <label for="txtinfor">Nhập thông tin bài:</label><br>
+                <textarea name="txtinfor" id="txtinfor"></textarea>
+                <div id="subbutton">
+                    <button   class="btn" name="btnRegistlop" value="true">Thêm</button>
+                </div>
+            </form>
+        </section>
+        <section class="s2">
+            <h1>Danh sách lớp - lịch học</h1>
+            <table id="table4">
+                <tbody>
+                    <tr>
+                        <td><b>STT</b></td>
+                        <td><b>ID lớp</b></td>
+                        <td><b>Lịch học</b></td>
+                        <td><b>Link bài</b></td>
+                        <td><b>Chức năng</b></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>4/21/2020</td>
+                        <td>data/bai1.pdf</td>
+                        <td>
+                            <form    ><button   value="2" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4/25/2020</td>
+                        <td>data/bai1.pdf</td>
+                        <td>
+                            <form    ><button   value="3" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>4/29/2020</td>
+                        <td>data/bai4.pdf</td>
+                        <td>
+                            <form    ><button   value="4" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>4/30/2020</td>
+                        <td>data/bai4.pdf</td>
+                        <td>
+                            <form    ><button   value="5" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5/4/2020</td>
+                        <td>data/bai4.pdf</td>
+                        <td>
+                            <form    ><button   value="5" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>5/6/2020</td>
+                        <td>data/bai4.pdf</td>
+                        <td>
+                            <form    ><button   value="6" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>1</td>
+                        <td>6/9/2020</td>
+                        <td>data/baitaplon.pdf</td>
+                        <td>
+                            <form    ><button   value="9" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>6/11/2020</td>
+                        <td>data/DoVanGiang_Baitapgiuaki.pdf</td>
+                        <td>
+                            <form    ><button   value="8" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>11/26/2020</td>
+                        <td>data/Doan-Tien-Dat.pdf</td>
+                        <td>
+                            <form    ><button   value="10" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>4/22/2021</td>
+                        <td>data/DoVanGiang_Baitapgiuaki.pdf</td>
+                        <td>
+                            <form    ><button   value="10" class="btn"
+                                    name="btnXoax"  >Xóa</button></form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+    <footer>
+        <aside class="aside">
+            <h2><b>Trang web bài giảng học trực tuyến G-H</b></h2>
+            <p class="footer">Trang web được thiết kế bởi sinh viên lớp 1810A05 - ĐH Mở HN</p>
+        </aside>
+        <section class="GH">
+            <h3><b>Liên hệ</b></h3>
+            <p class="footer"><i class="iconF fas fa-map-marked-alt"></i>Địa chỉ:96 Định Công, Hoàng Mai, HN</p>
+            <p class="footer"><i class="iconF fas fa-envelope"></i>Mail:tructuyen@gmail.com</p>
+        </section>
+        <section class="GH">
+            <h3>Thành viên</h3>
+            <p class="footer"><a href="https://www.facebook.com/profile.php?id=100005761937708"
+                    title="Facebook Giang"><i class="iconF fab fa-facebook-square"></i>Đỗ Văn Giang</a></p>
+        </section>
+    </footer>
+</body>
+
+</html>

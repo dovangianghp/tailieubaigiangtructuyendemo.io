@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Đăng nhập
+    </title>
+    <link href="../filecss/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        HỆ THỐNG HỌC TRỰC TUYẾN G-H
+    </header>
+    <div id="center">
+        <div id="grid">
+            <aside id="img_left"></aside>
+            <section>
+                <div method="post" id="form_login" >
+                    <div class="aspNetHidden">
+                        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                            value="+GwErWme3GLUlPWjsymcubkMaMk6OpfDfeoohaUmOyRQ4m4Y6SU251coe6IIM30SfEGE0PwXf6+2C0Nl5O0UY2EBreyQmiSEsK1KUdmFh2U=">
+                    </div>
+
+                    <div class="aspNetHidden">
+
+                        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB">
+                    </div>
+                    <h1>ĐĂNG NHẬP</h1>
+                    <br>
+                    <label for="txtName_log">Nhập tên đăng nhập:</label>
+
+                    <input type="email" id="txtName_log" name="txtName_log" value="">
+
+                    <label for="txtPass_log">Nhập mật khẩu:</label>
+
+                    <input type="password" id="txtPass_log" name="txtPass_log"
+                        placeholder="Nhập mật khẩu ít nhất 8 kí tự" value="">
+
+                        <button type="submit" name="btnLogin1" value="true"><a href="trangchuSV.html">Đăng nhập SV</a></button>
+                        <button type="submit" name="btnLogin2" value="true"><a href="trangchuGV.html">Đăng nhập GV</a></button>
+                        <button type="submit" name="btnLogin3" value="true"><a href="trangchuadmin.html">Đăng nhập admin</a></button>
+                    
+                    <p>Đã có tài khoản?-<a href="regist.html">Đăng ký</a></p>
+                </div>
+            </section>
+        </div>
+       
+    </div>
+    <footer>
+        Đỗ Văn Giang
+    </footer>
+    <script type="text/javascript" src="../filejs/login.js"></script>
+</body>
+
+</html>
