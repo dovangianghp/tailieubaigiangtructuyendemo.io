@@ -20,6 +20,11 @@ nav {
     background-color: #5983FC;
     box-shadow: 2px 5px 10px #5983fc
 }
+button:hover,.button:hover{
+    transform: scale(110%);
+    transition: ease 1s;
+}
+
 .first{
     flex-grow: 9;
 }
@@ -34,8 +39,18 @@ nav {
     margin:0px 20px;
 }
 .nav>li:hover{
+    opacity: 0.8;
     border-bottom:3px inset blue;
     margin-bottom:-3px;
+    animation:liUp ease .3s forwards;
+}
+@keyframes liUp {
+    from{
+        margin-top: 0px;
+    }
+    to{
+        margin-top: -5px;
+    }
 }
 .last {
     flex-grow: 1;
@@ -275,7 +290,6 @@ button:hover{
     }
     .nav>li{
         width:100%;
-        
         text-align:center;
     }
     footer{
