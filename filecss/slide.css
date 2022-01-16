@@ -9,7 +9,7 @@ body {
 .container {
     margin:3px auto;
     width: 90%;
-    height: 400px;
+    max-height: 400px;
     position: relative;
     border-radius:30px;
 }
@@ -28,11 +28,10 @@ img{
     display:block;
 }
 @keyframes change {
-    from {
+    0% {
         opacity:0.2;
     }
-
-    to {
+    100%{
         opacity:1;
     }
 }

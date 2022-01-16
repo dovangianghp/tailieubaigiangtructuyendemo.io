@@ -7,9 +7,11 @@
 body {
     padding:0px;
     margin:0px auto;
+    min-height: 688px;
+    max-width: 1360px;
 }
 button{
-    border:none;
+    border:transparent;
 }
 header{
     width:100%;
@@ -19,10 +21,6 @@ nav {
     line-height: 50px;
     background-color: #5983FC;
     box-shadow: 2px 5px 10px #5983fc
-}
-button:hover,.button:hover{
-    transform: scale(110%);
-    transition: ease 1s;
 }
 
 .first{
@@ -83,16 +81,21 @@ button:hover,.button:hover{
 }
 .button,.button_exit {
     display: flex;
-    height: 40px;
+    height: 30px;
     background-color: #5983FC;
     margin: 5px 0px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 15px;
 }
 .button_exit {
     background-color: brown;
+}
+
+button:hover , .button_exit:hover , .button:hover{
+    transform:scale(1.1);
+    transition: ease 1s;
 }
 ul {
     list-style: none;
@@ -187,7 +190,7 @@ footer {
 .iconF{
     padding-right: 5px;
 }
-button:hover{
+button:hover,.button_exit:hover, .button:hover{
     cursor:pointer;
 }
 #contain{
